@@ -21,30 +21,30 @@ public class Question6 {
         //asking for daytime minutes
         System.out.println("Please enter  daytime minutes");
         double day = input.nextDouble();
-       
+
         //asking for evening minutes
         System.out.println("Please enter  evening minutes");
         double eve = input.nextDouble();
-       
+
         //asking for weekend minutes
         System.out.println("Please enter  weekend minutes");
         double week = input.nextDouble();
-        
+
         // working out the free minutes at the beginning
         double priceA = 0;
         double priceB = 0;
         if (day >= 100) {
             priceA = day - 100;
         }
-            
-            // working out the free minutes at the beginning
 
-            if (day >= 250) {
-                priceB = day - 250;
-           
+        // working out the free minutes at the beginning
+
+        if (day >= 250) {
+            priceB = day - 250;
+
 
         }
-        // determining daytime price
+        // deter mining daytime price
         double priceA1 = priceA * 0.25;
         double priceB1 = priceB * 0.45;
         // determining the price of the evening
@@ -59,10 +59,13 @@ public class Question6 {
         // telling the user the price of each plan
         System.out.println("The price of plan A" + planA);
         System.out.println("The price of plan B" + planB);
-        if (planA >= planB) {
+        if (planA > planB) {
             System.out.println("Plan B is the cheapest ");
-        } else {
+        } 
+        if (planB > planA){
             System.out.println("Plan A is the cheapest ");
         }
+        if (planB==planA)
+            System.out.println("They are the same");
     }
 }
