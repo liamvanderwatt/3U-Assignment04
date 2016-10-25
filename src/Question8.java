@@ -17,7 +17,7 @@ public class Question8 {
     public static void main(String[] args) {
         // TODO code application logic here
         // create scanner
-        int player = 1;
+        int player = 0;
         Scanner input = new Scanner(System.in);
         while (true) {
             
@@ -54,6 +54,8 @@ public class Question8 {
                 
                player = player - roll; 
             }
+            if (player == 0)
+                System.out.println("You Quit");
             // telling user what square they are on
             System.out.println("You are now on square " + player);
             
